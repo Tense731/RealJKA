@@ -21,7 +21,95 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/responsive.css">
+<style>
+ /* Header background white */
+.main-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
 
+/* Container flex layout */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 15px;
+}
+
+/* Logo styling */
+.logo img {
+  max-height: 50px;
+}
+
+/* Desktop nav (visible on ≥768px) */
+.desktop-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.desktop-nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+.desktop-nav ul li a:hover {
+  color: #e31432; /* gold hover */
+}
+
+/* Mobile nav hidden by default */
+.mobile-nav {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mobile-nav ul li a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+.mobile-nav ul li a:hover {
+  background-color: #f8f8f8;
+  color: #e31432;
+}
+
+/* Mobile toggle button (hamburger) */
+.mobile-menu-toggle {
+  background: none;
+  border: 2px solid #e31432;
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  display: none; /* hidden on desktop by default */
+}
+.mobile-menu-toggle .menu-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px auto;
+  background-color: #e31432;
+  border-radius: 2px;
+}
+
+/* Utility class */
+.d-none {
+  display: none !important;
+}
+
+/* Responsive rules */
+@media (max-width: 767px) {
+  .desktop-nav { display: none; } /* hide desktop menu on mobile */
+  .mobile-menu-toggle { display: block; } /* show toggle */
+}
+
+</style>
 </head>
 
 <body class="home">
@@ -35,72 +123,41 @@
     <div class="ritekhela-wrapper">
 
         <!--// Header //-->
-        <header id="ritekhela-header" class="ritekhela-header-one">
-            
-            <!--// TopStrip //-->
-            <div class="ritekhela-topstrip">
-                <div class="container">
-                    <div class="row">
-                        
-                        <aside class="col-md-6">
-                            <strong>Latest News :</strong>
-                            <div class="ritekhela-latest-news-slider">
-                                <div class="ritekhela-latest-news-slider-layer">Welcome to JKA GLOBAL SOCCER SOLUTIONS</div>
-                            </div>
-                        </aside>
-                        <aside class="col-md-6">
-                            <ul class="ritekhela-user-strip">
-                                <li><a href="#"><i class="fa fa-globe-asia"></i> Support</a></li>
-                                <li><a href="#"><i class="fa fa-dollar-sign"></i> Currency : USD</a></li>
-                                <li><a href="#" data-toggle="modal" data-target="#ritekhelamodalcenter"><i class="fa fa-user-alt"></i>SOCCER WORLD</a></li>
-                        
-                            </ul>
-                        </aside>
+       <!-- Mobile Friendly Header -->
+<header class="main-header">
+  <div class="container header-container">
+    <div class="logo">
+      <a href="index-2.html">
+        <img src="images/jkalogo.png" alt="Logo" height="50">
+      </a>
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index-2.html">Home</a></li>
+        <li><a href="blog-grid.html">Our Team</a></li>
+        <li><a href="shop-grid.html">Affiliations</a></li>
+        <li><a href="blog-grid-wrsb.html">Gallery</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </div>
+  <nav class="mobile-nav d-none">
+    <ul>
+      <li><a href="index-2.html">Home</a></li>
+      <li><a href="blog-grid.html">Our Team</a></li>
+      <li><a href="shop-grid.html">Affiliations</a></li>
+      <li><a href="blog-grid-wrsb.html">Gallery</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
-                    </div>
-                </div>
-            </div>
-            <!--// TopStrip //-->
-            
-            <!--// Main Header //-->
-            <div class="ritekhela-main-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="index-2.html" class="ritekhela-logo"><img src="images/lg1.png" height="100vh" alt=""></a>
-                            <div class="ritekhela-right-section">
-                                <div class="ritekhela-navigation">
-                                    <span class="ritekhela-menu-link">
-                                        <span class="menu-bar"></span>
-                                        <span class="menu-bar"></span>
-                                        <span class="menu-bar"></span>
-                                    </span>
-                                    <nav id="main-nav">
-                                        <ul id="main-menu" class="sm sm-blue">
-                                            <li class="active"><a href="index-2.html">Home</a></li>
-                                            
-                                            
-                                            <li><a href="blog-grid.html">Our Team</a>
-                                                
-                                            </li>
-                                            <li><a href="shop-grid.html">Affilations</a>
-                                                  </li>
-                                            <li><a href="blog-grid-wrsb.html">Gallery</a></li>
-                                            
-                                            </li>
-                                            <li><a href="contact-us.html">Contact Us</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--// Main Header //-->
 
-        </header>
         <!--// Header //-->
         
         <!--// SubHeader //-->
@@ -360,6 +417,16 @@
        </div>
     </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  toggle.addEventListener('click', function() {
+    mobileNav.classList.toggle('d-none');
+  });
+});
+</script>
 
     <!-- jQuery -->
     <script src="script/jquery.js"></script>
